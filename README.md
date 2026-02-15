@@ -201,39 +201,18 @@ E. Model Testing
 
 
 
-
+Reflection Questions:
 
 1. How did the number of images per class affect your model’s accuracy?
-
-With your counts ranging from 177 (Onion/Saging) to 250 (Ampalaya), your dataset is relatively balanced. However, the classes with fewer images (like Onion) might show slightly lower confidence scores compared to Ampalaya. In Teachable Machine, a lack of variety (different angles, lighting, or backgrounds) usually hurts accuracy more than a small difference in the total count.
-
- 2. Which plant species were most commonly misclassified and why?
-
-The most common "confusion pairs" in your list are likely:
-
- Sitaw vs. Sigarilyas vs. Patola: Because these are all long, green, pod-like structures, the model might struggle with the specific texture of the "wings" on Sigarilyas versus the "ridges" on Patola.
- Kangkong vs. Kamote: Both are creeping vines with similar green leaf shapes. If the background (soil/garden) is similar, the model might focus on the environment rather than the leaf venation.
- Pechay vs. Mustard (if added): The broad green leaves look very similar under different lighting.
-
- 3. How did changing the epochs, batch size, or learning rate affect the training results?
-
-Since Teachable Machine is "Transfer Learning," these settings behave as follows:
-
- Epochs: If you noticed the accuracy "jumping" or not settling, you likely increased epochs. Too many (e.g., 100+) on a small dataset can lead to overfitting, where it memorizes your specific photos but fails on new ones.
- Batch Size: Smaller batches (e.g., 16) usually help the model learn more detail but take longer. Larger batches (e.g., 64) are faster but can make the learning "blunt."
- Learning Rate: If set too high (e.g., 0.01), your model might have struggled to "find" the patterns, resulting in fluctuating accuracy.
-
- 4. What challenges did you encounter during dataset collection and labeling?
-
- Visual Similarity: Distinguishing between different types of "green leaves" (like Saluyot vs. Malunggay) requires very clear, close-up shots.
- Background Noise: If all your Alugbati photos were taken on a wooden table and all Ampalaya on a white floor, the model might learn to recognize the table/floor instead of the plant.
- Labeling Consistency: Ensuring that "Saging" refers only to the fruit or also includes the leaf/heart can confuse the model if not labeled strictly.
-
- 5. If you were to improve your model, what specific changes would you make and why?
-
- Data Augmentation: I would add photos of the plants in different states (sliced vs. whole, cooked vs. raw, or under different lighting).
- Background Diversity: Taking photos of the vegetables in a kitchen, a garden, and a market setting would make the model more "robust" (capable of working in the real world).
- Increase Samples for "Low" Classes: I would bring Onion and Saging up to 250 to match Ampalaya, ensuring the model doesn't develop a bias toward the classes with more data.
+Answer: The relatively balanced dataset ensured consistent performance, though classes with fewer images like Onion and Saging showed slightly lower confidence scores compared to the larger Ampalaya set.
+2. Which plant species were most commonly misclassified and why?
+Answer: Long green vegetables like Sitaw, Sigarilyas, and Patola were often confused because the model struggled to distinguish between their similar shapes and subtle surface textures.
+3. How did changing the epochs, batch size, or learning rate affect the training results?
+Answer: Adjusting these parameters balanced the training speed and prevented the model from either failing to find patterns or overfitting to specific training photos.
+4. What challenges did you encounter during dataset collection and labeling?
+Answer: The main challenges were capturing clear differences between visually similar green leaves and ensuring the model ignored background objects like tables or floors during training.
+5. If you were to improve your model, what specific changes would you make and why?
+Answer: I would add more diverse photos of the plants in different environments and states (such as sliced or cooked) to make the model more robust and accurate in real-world scenarios.
 
 
 
