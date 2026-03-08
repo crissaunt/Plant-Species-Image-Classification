@@ -1,5 +1,5 @@
 # Plant-Species-Image-Classification
-
+https://docs.google.com/presentation/d/145rmOhzIB_9f4UQmfJUCWtwoWJX2O43fU4HCKbONe94/edit?usp=sharing
 A. Project Overview
     This project utilizes Google Teachable Machine to develop a lightweight, web-based image classification model. By leveraging transfer learning, the system is trained on a custom dataset of images to recognize and categorize specific visual patterns in real-time.
     The primary purpose of this model is to provide an accessible yet highly accurate method for automating visual identification tasks within a digital ecosystem.
